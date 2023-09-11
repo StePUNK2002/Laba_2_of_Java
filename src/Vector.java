@@ -59,7 +59,7 @@ public class Vector {
             elements[i + 1] = value;
         }
     }
-    public void Print()
+    public void print()
     {
         for (int i = 0; i < elements.length; i++)
         {
@@ -113,15 +113,15 @@ public class Vector {
         return result;
     }
 
-    public static double dotProduct(Vector vector1, Vector vector2) {
+    public static double scalarProiz(Vector vector1, Vector vector2) {
         if (vector1.getLength() != vector2.getLength()) {
             throw new IllegalArgumentException("Векторы разных длин");
         }
 
-        double dotProduct = 0;
+        double answer = 0;
         for (int i = 0; i < vector1.getLength(); i++) {
-            dotProduct += vector1.getElement(i) * vector2.getElement(i);
+            answer += vector1.getElement(i) * vector2.getElement(i);
         }
-        return dotProduct;
+        return answer;
     }
 }
